@@ -1,0 +1,3 @@
+funcion fun1(){
+  numerico a = 3 - 3 + 1;
+}
