@@ -1,0 +1,20 @@
+funcion fun1(a){
+  numerico b;
+
+  si(a == 5){
+    b = a + 8 - 3;
+  }
+  sino{
+    b = 10 - 3;
+  }
+
+  si(b == 10){
+    b = 0;
+  }
+  sino{
+    b = 100;
+  }
+
+}
+
+fun fun1(5);

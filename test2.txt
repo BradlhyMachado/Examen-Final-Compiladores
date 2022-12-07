@@ -1,0 +1,9 @@
+funcion fun1(){
+  numerico a;
+  numerico b;
+  numerico c;
+
+  a = 3 + 4;
+  b = 10;
+  numerico c = a + b;
+}
