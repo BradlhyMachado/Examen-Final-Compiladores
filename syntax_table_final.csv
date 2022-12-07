@@ -1,0 +1,21 @@
+Nonterminal,funcion,id,iz_paren,der_paren,iz_llave,der_llave,coma,pt_coma,igual,numero,palabra,leer,imprimir,hash,numerico,cadena,suma,resta,division,multiplicacion,y,o,si,mientras,sino,mayor_que,menor_que,mayor_igual,menor_igual,igualdad,diferente,fun,$
+PROGRA,PROGRA -> FUNC SENT,PROGRA -> FUNC SENT,,,,,,,,,,PROGRA -> FUNC SENT,PROGRA -> FUNC SENT,,PROGRA -> FUNC SENT,PROGRA -> FUNC SENT,,,,,,,PROGRA -> FUNC SENT,PROGRA -> FUNC SENT,,,,,,,,PROGRA -> FUNC SENT,PROGRA -> FUNC SENT
+FUNC,FUNC -> funcion id iz_paren IN der_paren iz_llave SENT der_llave FUNC,FUNC -> '',,,,,,,,,,FUNC -> '',FUNC -> '',,FUNC -> '',FUNC -> '',,,,,,,FUNC -> '',FUNC -> '',,,,,,,,FUNC -> '',FUNC -> ''
+IN,,IN -> EXP IN',,IN -> '',,,,,,IN -> EXP IN',IN -> EXP IN',,,,,,,,,,,,,,,,,,,,,IN -> EXP IN',
+IN',,,,IN' -> '',,,IN' -> coma EXP IN',,,,,,,,,,,,,,,,,,,,,,,,,,
+SENT,,SENT -> DECLA SENT,,,,SENT -> '',,,,,,SENT -> CIN SENT,SENT -> PRINT SENT,,SENT -> DECLA SENT,SENT -> DECLA SENT,,,,,,,SENT -> EST SENT,SENT -> EST SENT,,,,,,,,SENT -> FUN' SENT,SENT -> ''
+DECLA,,DECLA -> id DE pt_coma,,,,,,,,,,,,,DECLA -> TYPE id DE pt_coma,DECLA -> TYPE id DE pt_coma,,,,,,,,,,,,,,,,,
+DE,,,,,,,,DE -> '',DE -> igual ASIG,,,,,,,,,,,,,,,,,,,,,,,,
+ASIG,,ASIG -> EXP ASIG',,,,,,,,ASIG -> EXP ASIG',ASIG -> EXP ASIG',,,,,,,,,,,,,,,,,,,,,ASIG -> EXP ASIG',
+ASIG',,,,,,,,ASIG' -> '',,,,,,,,,ASIG' -> OPE EXP ASIG',ASIG' -> OPE EXP ASIG',ASIG' -> OPE EXP ASIG',ASIG' -> OPE EXP ASIG',ASIG' -> OPE EXP ASIG',ASIG' -> OPE EXP ASIG',,,,,,,,,,,
+EXP,,EXP -> id,,,,,,,,EXP -> numero,EXP -> palabra,,,,,,,,,,,,,,,,,,,,,EXP -> FUN,
+CIN,,,,,,,,,,,,CIN -> leer iz_paren EXP der_paren pt_coma,,,,,,,,,,,,,,,,,,,,,
+PRINT,,,,,,,,,,,,,PRINT -> imprimir iz_paren PRINT' der_paren pt_coma,,,,,,,,,,,,,,,,,,,,
+PRINT',,PRINT' -> EXP,,,,,,,,PRINT' -> EXP,PRINT' -> EXP,,,PRINT' -> hash id hash,,,,,,,,,,,,,,,,,,PRINT' -> EXP,
+TYPE,,,,,,,,,,,,,,,TYPE -> numerico,TYPE -> cadena,,,,,,,,,,,,,,,,,
+OPE,,,,,,,,,,,,,,,,,OPE -> suma,OPE -> resta,OPE -> division,OPE -> multiplicacion,OPE -> y,OPE -> o,,,,,,,,,,,
+EST,,,,,,,,,,,,,,,,,,,,,,,EST -> si iz_paren EXP COM EXP der_paren iz_llave SENT der_llave EST',EST -> mientras iz_paren EXP COM EXP der_paren iz_llave SENT der_llave,,,,,,,,,
+EST',,EST' -> '',,,,EST' -> '',,,,,,EST' -> '',EST' -> '',,EST' -> '',EST' -> '',,,,,,,EST' -> '',EST' -> '',EST' -> sino iz_llave SENT der_llave,,,,,,,EST' -> '',EST' -> ''
+COM,,,,,,,,,,,,,,,,,,,,,,,,,,COM -> mayor_que,COM -> menor_que,COM -> mayor_igual,COM -> menor_igual,COM -> igualdad,COM -> diferente,,
+FUN,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,FUN -> fun id iz_paren IN der_paren,
+FUN',,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,FUN' -> fun id iz_paren IN der_paren pt_coma,
