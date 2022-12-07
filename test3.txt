@@ -1,0 +1,6 @@
+funcion fun1(a, b){
+  numerico y = a + b + 2;
+}
+
+numerico x;
+x = fun fun1(9, 8);
